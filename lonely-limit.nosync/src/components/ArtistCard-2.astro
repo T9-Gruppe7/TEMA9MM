@@ -3,25 +3,25 @@ const { title, ptext } = Astro.props;
 ---
 
 <div class="container">
-  <div class="card">
-    <div class="image-container">
-      <img src="/img/birger.png" alt="Tryllekunstner Birger" />
-    </div>
+    <div class="card">
     <div class="text-container">
       <h2>{title}</h2>
       <p>{ptext}</p>
     </div>
+  <div class="image-container">
+    <img src="/img/birger.png" alt="Tryllekunstner Birger" />
   </div>
+    </div>
 </div>
 
 <style>
-
-  .container{
+ .container{
     display: flex;
     justify-content: center;
-    align-items: center;
+    
    
   }
+
   .card {
     display: flex;
     background-color: #f3f1f5;
@@ -30,7 +30,7 @@ const { title, ptext } = Astro.props;
     overflow: hidden;
     max-width: 800px;
     margin: 20px;
-  
+    
   }
 
   .image-container {
