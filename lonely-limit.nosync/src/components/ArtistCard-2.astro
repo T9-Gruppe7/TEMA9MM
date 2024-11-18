@@ -3,22 +3,22 @@ const { title, ptext, img } = Astro.props;
 ---
 
 <div class="container">
-  <div class="card">
-    <div class="image-container">
-    <img src={img} alt="Tryllekunstnere">
-    </div>
+    <div class="card">
     <div class="text-container">
       <h3>{title}</h3>
       <p>{ptext}</p>
     </div>
+  <div class="image-container">
+    <img src={img} alt="Tryllekunstner Birger" />
   </div>
+    </div>
 </div>
 
 <style>
-
-.container{
+ .container{
     display: flex;
     justify-content: center;
+    
    
   }
 
@@ -28,9 +28,10 @@ const { title, ptext, img } = Astro.props;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 1200px;
-    height: 410px;
     margin: 0 20px 0 20px;
+    max-width: 1200px;
+    min-width: 1200px;
+    height: 410px;
     
   }
 
@@ -50,6 +51,7 @@ const { title, ptext, img } = Astro.props;
     height: auto;
     object-fit: cover;
     border-radius: 25px;
+    
  
   }
 
@@ -57,11 +59,10 @@ const { title, ptext, img } = Astro.props;
     display: flex;
     flex-direction: column;
     flex: 2;
+    height: 100px;
     color: #333;
-    font-family: Arial, sans-serif;
+    
   }
-
- 
 
   h3 {
   font-family: "Barrio", serif;
@@ -82,5 +83,6 @@ const { title, ptext, img } = Astro.props;
   padding-left: 15%;
   padding-right: 15%;
   text-align: left;
+
   }
 </style>
