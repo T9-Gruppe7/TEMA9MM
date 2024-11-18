@@ -1,15 +1,19 @@
+---
+const { title, ptext } = Astro.props;
+---
+
 <div class="card">
-    <div class="image-container">
-        <img src="/img/birger.png" alt="Tryllekunstner Birger">
-    </div>
-    <div class="text-container">
-        <h2>BIRGER</h2>
-        <p>Birger tryller for KidsAid i Viborg og Odense. <br> Han har optrådt for både store og små i over 20 år.</p>
-    </div>
+  <div class="image-container">
+    <img src="/img/birger.png" alt="Tryllekunstner Birger" />
+  </div>
+  <div class="text-container">
+    <h2>{title}</h2>
+    <p>{ptext}</p>
+  </div>
 </div>
 
 <style>
-.card {
+  .card {
     display: flex;
     background-color: #f3f1f5;
     border-radius: 25px;
@@ -17,44 +21,43 @@
     overflow: hidden;
     max-width: 800px;
     margin: 20px;
-}
+  }
 
-.image-container {
+  .image-container {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-right: 3px solid #333; 
-}
+    border-right: 3px solid #333;
+  }
 
-.image-container img {
+  .image-container img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
-}
+  }
 
-.text-container {
+  .text-container {
     flex: 2;
     padding: 20px;
     color: #333;
     font-family: Arial, sans-serif;
-    
-}
+  }
 
-.text-container h2 {
+  .text-container h2 {
     font-size: 2em;
-    color: #5a1d5c; 
-    font-family: 'Arial Black', sans-serif; 
+    color: #5a1d5c;
+    font-family: "Arial Black", sans-serif;
     margin-bottom: 10px;
     margin-left: 50px;
-}
+  }
 
-.text-container p {
+  .text-container p {
     font-size: 1em;
     line-height: 1.5;
     color: #333333;
     margin-left: 50px;
-}
+  }
 </style>
